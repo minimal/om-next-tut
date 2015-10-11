@@ -4,12 +4,18 @@
             [cljs.test :refer-macros [is async]]
             [sablono.core :as sab :include-macros true]
             om-next-tut.animals
+            om-next-tut.datascript
             [om.dom :as dom])
   (:require-macros
    [devcards.core :as dc :refer [defcard deftest dom-node defcard-doc]]))
 
 (enable-console-print!)
 (println "Hello nooworld!")
+
+
+(defcard-doc
+  "A [devcards](https://github.com/bhauman/devcards) interpretation of the [Om Next Quick-Start](https://github.com/omcljs/om/wiki/Quick-Start-(om.next))— go there first")
+
 
 (defui HelloWorld
   Object
@@ -29,9 +35,6 @@
 (defcard simple-component
   "Test that Om Next works"
   (hello {:text "hello"}))
-
-
-
 
 ;; #_(js/React.render
 ;;    (hello {:text "Hello, world!"})

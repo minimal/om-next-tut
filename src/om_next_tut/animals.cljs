@@ -14,18 +14,21 @@
     [[1 "Ant"] [2 "Antelope"] [3 "Bird"] [4 "Cat"] [5 "Dog"]
      [6 "Lion"] [7 "Mouse"] [8 "Monkey"] [9 "Snake"] [10 "Zebra"]]}))
 
-(defmulti read (fn [env key params] key))
+(def m ;; <- ignore def and do hack for devcards source display
+  (do
+    (defmulti read (fn [env key params] key))
 
-(defmethod read :default
-  [{:keys [state] :as env} key params]
-  (let [st @state]
-    (if-let [[_ value] (find st key)]
-      {:value value}
-      {:value :not-found})))
+    (defmethod read :default
+      [{:keys [state] :as env} key params]
+      (let [st @state]
+        (if-let [[_ value] (find st key)]
+          {:value value}
+          {:value :not-found})))
 
-(defmethod read :animals/list
-  [{:keys [state] :as env} key {:keys [start end]}]
-  {:value (subvec (:animals/list @state) start end)})
+    (defmethod read :animals/list
+      [{:keys [state] :as env} key {:keys [start end]}]
+      {:value (subvec (:animals/list @state) start end)})
+    ))
 
 (def reconciler
   (om/reconciler
@@ -45,11 +48,11 @@
     (let [{:keys [app/title animals/list]} (om/props this)]
       (sab/html
        [:div
-        [:h3 title]
         [:button
          {:onClick (fn [e] (change-params))}
          "Change query params"]
         [:div (str "Query: " (om/get-query (om/class->any reconciler AnimalsList)))]
+        [:h3 title]
         [:ul
          (for [[i name] list]
            [:li (str i ". " name)])]]))))
@@ -65,7 +68,7 @@
    [Tutorial](https://github.com/omcljs/om/wiki/Quick-Start-%28om.next%29#changing-queries-over-time)"
   (dc/mkdn-pprint-source app-state)
   "See the [tutorial](https://github.com/omcljs/om/wiki/Quick-Start-%28om.next%29#changing-queries-over-time) for the full multimethods source"
-  (dc/mkdn-pprint-source read)
+  (dc/mkdn-pprint-source m)
   "`defui` with params and query:"
   (dc/mkdn-pprint-source AnimalsList)
   (dc/mkdn-pprint-source reconciler)
