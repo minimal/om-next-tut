@@ -51,8 +51,8 @@ return cljs.core._lookup.call(null,this$__$1,k,null);
 om.next.impl.refs.Ref.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this$,k,not_found){
 var self__ = this;
 var this$__$1 = this;
-var G__44342 = (((k instanceof cljs.core.Keyword))?k.fqn:null);
-switch (G__44342) {
+var G__63363 = (((k instanceof cljs.core.Keyword))?k.fqn:null);
+switch (G__63363) {
 case "root":
 return cljs.core.nth.call(null,self__.path,(0));
 
@@ -76,8 +76,8 @@ return cljs.core._nth.call(null,this$__$1,i,null);
 om.next.impl.refs.Ref.prototype.cljs$core$IIndexed$_nth$arity$3 = (function (this$,i,not_found){
 var self__ = this;
 var this$__$1 = this;
-var G__44343 = i;
-switch (G__44343) {
+var G__63364 = i;
+switch (G__63364) {
 case (0):
 return cljs.core.nth.call(null,self__.path,(0));
 
@@ -128,14 +128,14 @@ return (new om.next.impl.refs.Ref(path));
 
 om.next.impl.refs.ref = (function om$next$impl$refs$ref(var_args){
 var args__17397__auto__ = [];
-var len__17390__auto___44349 = arguments.length;
-var i__17391__auto___44350 = (0);
+var len__17390__auto___63370 = arguments.length;
+var i__17391__auto___63371 = (0);
 while(true){
-if((i__17391__auto___44350 < len__17390__auto___44349)){
-args__17397__auto__.push((arguments[i__17391__auto___44350]));
+if((i__17391__auto___63371 < len__17390__auto___63370)){
+args__17397__auto__.push((arguments[i__17391__auto___63371]));
 
-var G__44351 = (i__17391__auto___44350 + (1));
-i__17391__auto___44350 = G__44351;
+var G__63372 = (i__17391__auto___63371 + (1));
+i__17391__auto___63371 = G__63372;
 continue;
 } else {
 }
@@ -152,12 +152,12 @@ return (new om.next.impl.refs.Ref(cljs.core.into.call(null,new cljs.core.Persist
 
 om.next.impl.refs.ref.cljs$lang$maxFixedArity = (2);
 
-om.next.impl.refs.ref.cljs$lang$applyTo = (function (seq44346){
-var G__44347 = cljs.core.first.call(null,seq44346);
-var seq44346__$1 = cljs.core.next.call(null,seq44346);
-var G__44348 = cljs.core.first.call(null,seq44346__$1);
-var seq44346__$2 = cljs.core.next.call(null,seq44346__$1);
-return om.next.impl.refs.ref.cljs$core$IFn$_invoke$arity$variadic(G__44347,G__44348,seq44346__$2);
+om.next.impl.refs.ref.cljs$lang$applyTo = (function (seq63367){
+var G__63368 = cljs.core.first.call(null,seq63367);
+var seq63367__$1 = cljs.core.next.call(null,seq63367);
+var G__63369 = cljs.core.first.call(null,seq63367__$1);
+var seq63367__$2 = cljs.core.next.call(null,seq63367__$1);
+return om.next.impl.refs.ref.cljs$core$IFn$_invoke$arity$variadic(G__63368,G__63369,seq63367__$2);
 });
 om.next.impl.refs.ref_QMARK_ = (function om$next$impl$refs$ref_QMARK_(x){
 return (x instanceof om.next.impl.refs.Ref);
