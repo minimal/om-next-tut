@@ -5,6 +5,7 @@
             [sablono.core :as sab :include-macros true]
             om-next-tut.animals
             om-next-tut.datascript
+            om-next-tut.identity
             [om.dom :as dom])
   (:require-macros
    [devcards.core :as dc :refer [defcard deftest dom-node defcard-doc]]))

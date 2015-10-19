@@ -8,7 +8,7 @@
                  [org.omcljs/om "1.0.0-alpha3"]
                  [sablono "0.3.6"]
                  [datascript "0.13.1"]
-                 [devcards "0.2.0-5-SNAPSHOT" :exclusions [cljsjs/react]]
+                 [devcards "0.2.0-5" :exclusions [cljsjs/react]]
                  [figwheel-sidecar "0.4.1" :scope "provided"]]
   :plugins [[lein-figwheel "0.4.1"]]
   :cljsbuild {:builds [{:id "dev"
