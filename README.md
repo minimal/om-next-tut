@@ -1,10 +1,12 @@
 # om-next-tut
 
-Om next tutorial with devcards
+Implementing the
+[Om next tutorials](https://github.com/omcljs/om/wiki#om-next) with
+[devcards](https://github.com/bhauman/devcards)
 
 ## Usage
 
-FIXME
+See the Om Wiki for the source of truth.
 
 ## License
 
