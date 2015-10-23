@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.145"]
-                 [org.omcljs/om "1.0.0-alpha4-SNAPSHOT"]
+                 [org.omcljs/om "1.0.0-alpha4"]
                  [sablono "0.3.6"]
                  [datascript "0.13.2"]
                  ;;[binaryage/devtools "0.3.0"]
